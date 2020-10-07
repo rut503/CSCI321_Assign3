@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		DFC0DD9B252E2BAB00C4A41E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0DD9A252E2BAB00C4A41E /* AppDelegate.swift */; };
 		DFC0DD9D252E2BAB00C4A41E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0DD9C252E2BAB00C4A41E /* SceneDelegate.swift */; };
-		DFC0DD9F252E2BAB00C4A41E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0DD9E252E2BAB00C4A41E /* FirstViewController.swift */; };
-		DFC0DDA1252E2BAB00C4A41E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0DDA0252E2BAB00C4A41E /* SecondViewController.swift */; };
+		DFC0DD9F252E2BAB00C4A41E /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0DD9E252E2BAB00C4A41E /* StopwatchViewController.swift */; };
+		DFC0DDA1252E2BAB00C4A41E /* TemperatureConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0DDA0252E2BAB00C4A41E /* TemperatureConversionViewController.swift */; };
 		DFC0DDA4252E2BAB00C4A41E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC0DDA2252E2BAB00C4A41E /* Main.storyboard */; };
 		DFC0DDA6252E2BB100C4A41E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC0DDA5252E2BB100C4A41E /* Assets.xcassets */; };
 		DFC0DDA9252E2BB100C4A41E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC0DDA7252E2BB100C4A41E /* LaunchScreen.storyboard */; };
+		DFC0DDB3252E31F700C4A41E /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DFC0DDB2252E31F700C4A41E /* digital-7.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DFC0DD97252E2BAB00C4A41E /* CSCI321_Assign3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSCI321_Assign3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC0DD9A252E2BAB00C4A41E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFC0DD9C252E2BAB00C4A41E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DFC0DD9E252E2BAB00C4A41E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DFC0DDA0252E2BAB00C4A41E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DFC0DD9E252E2BAB00C4A41E /* StopwatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
+		DFC0DDA0252E2BAB00C4A41E /* TemperatureConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConversionViewController.swift; sourceTree = "<group>"; };
 		DFC0DDA3252E2BAB00C4A41E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFC0DDA5252E2BB100C4A41E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFC0DDA8252E2BB100C4A41E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFC0DDAA252E2BB100C4A41E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFC0DDB2252E31F700C4A41E /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +62,13 @@
 			children = (
 				DFC0DD9A252E2BAB00C4A41E /* AppDelegate.swift */,
 				DFC0DD9C252E2BAB00C4A41E /* SceneDelegate.swift */,
-				DFC0DD9E252E2BAB00C4A41E /* FirstViewController.swift */,
-				DFC0DDA0252E2BAB00C4A41E /* SecondViewController.swift */,
+				DFC0DD9E252E2BAB00C4A41E /* StopwatchViewController.swift */,
+				DFC0DDA0252E2BAB00C4A41E /* TemperatureConversionViewController.swift */,
 				DFC0DDA2252E2BAB00C4A41E /* Main.storyboard */,
 				DFC0DDA5252E2BB100C4A41E /* Assets.xcassets */,
 				DFC0DDA7252E2BB100C4A41E /* LaunchScreen.storyboard */,
 				DFC0DDAA252E2BB100C4A41E /* Info.plist */,
+				DFC0DDB2252E31F700C4A41E /* digital-7.ttf */,
 			);
 			path = CSCI321_Assign3;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 				DFC0DDA9252E2BB100C4A41E /* LaunchScreen.storyboard in Resources */,
 				DFC0DDA6252E2BB100C4A41E /* Assets.xcassets in Resources */,
 				DFC0DDA4252E2BAB00C4A41E /* Main.storyboard in Resources */,
+				DFC0DDB3252E31F700C4A41E /* digital-7.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFC0DDA1252E2BAB00C4A41E /* SecondViewController.swift in Sources */,
-				DFC0DD9F252E2BAB00C4A41E /* FirstViewController.swift in Sources */,
+				DFC0DDA1252E2BAB00C4A41E /* TemperatureConversionViewController.swift in Sources */,
+				DFC0DD9F252E2BAB00C4A41E /* StopwatchViewController.swift in Sources */,
 				DFC0DD9B252E2BAB00C4A41E /* AppDelegate.swift in Sources */,
 				DFC0DD9D252E2BAB00C4A41E /* SceneDelegate.swift in Sources */,
 			);

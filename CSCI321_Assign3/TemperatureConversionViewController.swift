@@ -1,14 +1,16 @@
 //
-//  SecondViewController.swift
+//  TemperatureConversionViewController.swift
 //  CSCI321_Assign3
 //
-//  Created by Rutvik Patel on 10/7/20.
+//  Created by Rutvik Patel  : Z1865128
+//  Created by Aviraj Parmar : Z1861160
+//
 //  Copyright © 2020 Rut Codes. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class TemperatureConversionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
