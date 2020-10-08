@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="100" width="375" height="216"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5W-TP-KFM">
-                                <rect key="frame" x="143.5" y="348" width="88" height="41"/>
+                                <rect key="frame" x="157" y="348" width="61.5" height="32"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -60,6 +60,9 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stopwatch" image="Stopwatch" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="stopwatchTimePicker" destination="SEs-u4-ovN" id="x52-yN-wjA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,6 +84,10 @@
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cor-wv-fjn">
                                 <rect key="frame" x="0.0" y="163" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="vGT-H9-QqJ"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="3KS-Ze-UUd"/>
+                                </connections>
                             </pickerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e4y-NI-yhD">
                                 <rect key="frame" x="121" y="100" width="133" height="32"/>
@@ -88,9 +95,12 @@
                                     <segment title="°F ➝ °C"/>
                                     <segment title="°C ➝ °F"/>
                                 </segments>
+                                <connections>
+                                    <action selector="unitsOfConversionPicked:" destination="8rJ-Kc-sve" eventType="valueChanged" id="PRa-Gu-jPd"/>
+                                </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="53" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2My-KQ-vTZ">
-                                <rect key="frame" x="175" y="411" width="25" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Temperature..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2My-KQ-vTZ">
+                                <rect key="frame" x="95.5" y="411" width="184.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -112,6 +122,11 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Temperature" image="Temperature" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="convertedValueLabel" destination="2My-KQ-vTZ" id="4KV-qw-0hJ"/>
+                        <outlet property="tempAmountPicker" destination="cor-wv-fjn" id="Lnt-r7-wPg"/>
+                        <outlet property="unitsOfConversion" destination="e4y-NI-yhD" id="Zwy-gP-P3m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
