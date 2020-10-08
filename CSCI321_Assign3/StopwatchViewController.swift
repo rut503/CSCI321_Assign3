@@ -11,7 +11,12 @@
 import UIKit
 
 class StopwatchViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var stopwatchTimePicker: UIDatePicker!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,6 +24,7 @@ class StopwatchViewController: UIViewController {
         
     }
 
+    
 
 }
 
