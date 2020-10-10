@@ -28,6 +28,9 @@
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEs-u4-ovN">
                                 <rect key="frame" x="0.0" y="100" width="375" height="216"/>
+                                <connections>
+                                    <action selector="timePickerAction:" destination="9pv-A4-QxB" eventType="valueChanged" id="0nj-KA-OQp"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5W-TP-KFM">
                                 <rect key="frame" x="157" y="348" width="61.5" height="32"/>
@@ -38,9 +41,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzk-Yk-DQF">
                                 <rect key="frame" x="0.0" y="569" width="375" height="49"/>
                                 <items>
-                                    <barButtonItem title="Start" image="play.fill" catalog="system" width="92.5" id="eQc-1u-68V"/>
+                                    <barButtonItem title="Start" image="play.fill" catalog="system" width="92.5" id="eQc-1u-68V">
+                                        <connections>
+                                            <action selector="startButton:" destination="9pv-A4-QxB" id="JR2-68-btH"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="V7r-Qb-Ec2"/>
-                                    <barButtonItem title="Stop" image="stop.fill" catalog="system" width="108.5" id="X6d-Kk-aUj"/>
+                                    <barButtonItem title="Stop" image="stop.fill" catalog="system" width="108.5" id="X6d-Kk-aUj">
+                                        <connections>
+                                            <action selector="stopButton:" destination="9pv-A4-QxB" id="wfZ-It-JtW"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -61,7 +72,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Stopwatch" image="Stopwatch" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="playButtonOutlet" destination="eQc-1u-68V" id="iwe-95-hzt"/>
+                        <outlet property="stopButtonOutlet" destination="X6d-Kk-aUj" id="mJu-n4-8rt"/>
                         <outlet property="stopwatchTimePicker" destination="SEs-u4-ovN" id="x52-yN-wjA"/>
+                        <outlet property="timeLabel" destination="H5W-TP-KFM" id="fzk-YX-DEF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
