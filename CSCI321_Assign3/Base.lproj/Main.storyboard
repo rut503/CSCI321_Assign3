@@ -46,6 +46,11 @@
                                             <action selector="startButton:" destination="9pv-A4-QxB" id="JR2-68-btH"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Item" image="pause.fill" catalog="system" id="TOg-bn-gZT">
+                                        <connections>
+                                            <action selector="pauseButton:" destination="9pv-A4-QxB" id="k41-SG-yb9"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="V7r-Qb-Ec2"/>
                                     <barButtonItem title="Stop" image="stop.fill" catalog="system" width="108.5" id="X6d-Kk-aUj">
                                         <connections>
@@ -72,6 +77,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Stopwatch" image="Stopwatch" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="pauseButtonOutlet" destination="TOg-bn-gZT" id="qlL-hv-nx6"/>
                         <outlet property="playButtonOutlet" destination="eQc-1u-68V" id="iwe-95-hzt"/>
                         <outlet property="stopButtonOutlet" destination="X6d-Kk-aUj" id="mJu-n4-8rt"/>
                         <outlet property="stopwatchTimePicker" destination="SEs-u4-ovN" id="x52-yN-wjA"/>
@@ -168,6 +174,7 @@
     <resources>
         <image name="Stopwatch" width="25" height="25"/>
         <image name="Temperature" width="25" height="25"/>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="stop.fill" catalog="system" width="128" height="113"/>
     </resources>
