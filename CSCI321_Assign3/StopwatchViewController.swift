@@ -49,7 +49,7 @@ class StopwatchViewController: UIViewController {
      Pause button to pause the timer. It also enables the play button once we pause the timer.
      */
     @IBAction func pauseButton(_ sender: UIBarButtonItem) {
-        timer.invalidate()
+        timer.invalidate()                       //pause timer
         pauseButtonOutlet.isEnabled = false     //disables pause button
         playButtonOutlet.isEnabled = true       // enables play button
         flag = true
@@ -60,7 +60,7 @@ class StopwatchViewController: UIViewController {
      */
     @IBAction func stopButton(_ sender: UIBarButtonItem) {
         timer.invalidate()
-        timeLeft = Int(stopwatchTimePicker.countDownDuration)
+        timeLeft = Int(stopwatchTimePicker.countDownDuration)    // reset the timer to value selected
         timeFormatter(time: Int(stopwatchTimePicker.countDownDuration))
         stopButtonOutlet.isEnabled = false      //disables stop button
         playButtonOutlet.isEnabled = true       //enalbes play button
