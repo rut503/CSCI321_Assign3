@@ -19,33 +19,52 @@ class StopwatchViewController: UIViewController {
     @IBOutlet weak var stopButtonOutlet: UIBarButtonItem!
     var timeLeft = 60
     var timer = Timer()
+    var flag = false
+    @IBOutlet weak var pauseButtonOutlet: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        self.touch.isEnabled = false
+//        self.playButton = UIBarButtonItem(
+        
+        timeFormatter(time: timeLeft)
+        pauseButtonOutlet.isEnabled = false
+        stopButtonOutlet.isEnabled = false
     }
     
     @IBAction func startButton(_ sender: UIBarButtonItem) {
-        timeLeft = Int(stopwatchTimePicker.countDownDuration)
         
+        if ( !flag ) {
+            timeLeft = Int(stopwatchTimePicker.countDownDuration)
+        }
+        flag = true
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(decrementTimer), userInfo: nil, repeats: true)
-    
+        
         playButtonOutlet.isEnabled = false
+        pauseButtonOutlet.isEnabled = true
         stopButtonOutlet.isEnabled = true
     }
     
+    @IBAction func pauseButton(_ sender: UIBarButtonItem) {
+        timer.invalidate()
+//        timeLeft = Int(stopwatchTimePicker.countDownDuration)
+        pauseButtonOutlet.isEnabled = false
+        playButtonOutlet.isEnabled = true
+        flag = true
+    }
+    
     @IBAction func stopButton(_ sender: UIBarButtonItem) {
-         timer.invalidate()
+        timer.invalidate()
+        timeLeft = Int(stopwatchTimePicker.countDownDuration)
         timeFormatter(time: Int(stopwatchTimePicker.countDownDuration))
         stopButtonOutlet.isEnabled = false
         playButtonOutlet.isEnabled = true
-        
     }
     
     @IBAction func timePickerAction(_ sender: UIDatePicker) {
-        if (!timer.isValid) {
+        if (!timer.isValid && !flag) {
             timeFormatter(time: Int(stopwatchTimePicker.countDownDuration))
         }
     }
