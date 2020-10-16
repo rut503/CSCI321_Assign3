@@ -46,6 +46,7 @@
                                             <action selector="startButton:" destination="9pv-A4-QxB" id="JR2-68-btH"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Tfv-A3-OR7"/>
                                     <barButtonItem title="Item" image="pause.fill" catalog="system" id="TOg-bn-gZT">
                                         <connections>
                                             <action selector="pauseButton:" destination="9pv-A4-QxB" id="k41-SG-yb9"/>
